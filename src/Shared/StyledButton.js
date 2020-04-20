@@ -4,7 +4,7 @@ export const StyledButton = styled.button`
   border-radius: 25px;
   background-color: ${({ theme }) => theme.colorSecondary};
   color: ${({ theme }) => theme.colorPrimary};
-  margin-top: 30px;
+  margin-top: 40px;
   height: 40px;
   width: 90px;
   border: 0px;

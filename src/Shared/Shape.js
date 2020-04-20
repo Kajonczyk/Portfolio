@@ -9,12 +9,13 @@ export const Shape = ({
   top,
   translateX = "-50%",
   translateY = "-50%",
+  position = "relative",
 }) => {
   const styleObject = {
     width,
     height: `100%`,
 
-    position: "relative",
+    position: `${position}`,
     left,
     top,
     transform: `translate(${translateX},${translateY}) rotate(${rotation}deg) scale(${scale})`,

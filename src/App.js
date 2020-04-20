@@ -3,7 +3,9 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./Utils/theme";
 import { GlobalStyle } from "./Utils/GlobalStyle";
 import { Header } from "./Components/Header/Header";
-import { Navbar } from "./Components/Navbar/Navbar";
+import { Projects } from "./Components/Projects/Projects";
+import { Technologies } from "./Components/Technologies/Technologies";
+import { Footer } from "./Components/Footer/Footer";
 function App() {
   return (
     <div>
@@ -11,7 +13,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <>
           <Header />
-          <Navbar />
+          <Projects />
+          <Technologies />
+          <Footer />
         </>
       </ThemeProvider>
     </div>

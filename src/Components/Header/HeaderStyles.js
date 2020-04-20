@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Github } from "@styled-icons/boxicons-logos/Github";
 const paragraphStyles = ({ theme }) =>
   `font-family: ${theme.font.family.Didact};
   color:transparent;
@@ -7,6 +7,15 @@ const paragraphStyles = ({ theme }) =>
   position:relative;
   z-index:2;
   `;
+
+export const GithubIcon = styled(Github)`
+  width: 40px;
+  color: ${({ theme }) => theme.colorSecondary};
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
 
 export const StyledHeader = styled.header`
   margin: 0px auto;
@@ -26,7 +35,7 @@ export const StyledH2 = styled.h2`
 export const StyledParagraph = styled.p`
   position: relative;
   z-index: 2;
-  margin-top: 50px;
+  margin-top: 20px;
   font-family: ${({ theme }) => theme.font.family.Lato};
   font-size: ${({ theme }) => theme.font.size.xs};
 `;

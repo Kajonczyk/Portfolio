@@ -7,6 +7,7 @@ import {
   StyledHeader,
   StyledParagraph,
   StyledTextWrapper,
+  GithubIcon,
 } from "./HeaderStyles";
 
 export class Header extends Component {
@@ -56,9 +57,10 @@ export class Header extends Component {
           <Shape
             width="100%"
             height="100%"
-            top="-100%"
-            left="110%"
+            top="-120%"
+            left="106%"
             rotation="60"
+            scale="0.5"
           />
           <StyledTextWrapper offsetX={posX} offsetY={posY}>
             <StyledH1>Kamil Kopczacki</StyledH1>
@@ -69,6 +71,7 @@ export class Header extends Component {
             </StyledParagraph>
             <StyledButton>Explore</StyledButton>
           </StyledTextWrapper>
+          <GithubIcon />
         </StyledHeader>
       </>
     );
