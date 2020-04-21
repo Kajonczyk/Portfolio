@@ -6,6 +6,9 @@ import {
   youvidmobile,
   youvidtablet,
   youviddesktop,
+  juniorstarttablet,
+  juniorstartdesktop,
+  juniorstartmobile,
 } from "../../Images/index";
 import { Github } from "@styled-icons/boxicons-logos/Github";
 import { Eye } from "@styled-icons/fa-regular/Eye";
@@ -13,7 +16,7 @@ import { Eye } from "@styled-icons/fa-regular/Eye";
 const backgroundMobile = (background) => {
   switch (background) {
     case "juniorStart": {
-      return `url(${hawksmanmobile});`;
+      return `url(${juniorstartmobile});`;
     }
     case "hawksman": {
       return `url(${hawksmanmobile});`;
@@ -29,7 +32,7 @@ const backgroundMobile = (background) => {
 const backgroundMobileLarge = (background) => {
   switch (background) {
     case "juniorStart": {
-      return `url(${hawksmanmobile});`;
+      return `url(${juniorstarttablet});`;
     }
     case "hawksman": {
       return `url(${hawksmantablet});`;
@@ -45,7 +48,7 @@ const backgroundMobileLarge = (background) => {
 const backgroudTablet = (background) => {
   switch (background) {
     case "juniorStart": {
-      return `url(${hawksmanmobile});`;
+      return `url(${juniorstartdesktop});`;
     }
     case "hawksman": {
       return `url(${hawksmandesktop});`;

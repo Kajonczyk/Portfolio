@@ -44,7 +44,6 @@ export const Technologies = () => {
     <StyledSection ref={sectionRef}>
       <StyledContent>
         <StyledHeading>Technologies</StyledHeading>
-        {show()}
       </StyledContent>
 
       <IconsWrapper>

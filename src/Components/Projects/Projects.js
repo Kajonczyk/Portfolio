@@ -25,7 +25,7 @@ export const Projects = () => {
         <a href={image.githubURL} target="_blank" rel="noopener noreferrer">
           <GithubIcon />
         </a>
-        <a href={image.githubUrl} target="_blank" rel="noopener noreferrer">
+        <a href={image.liveURL} target="_blank" rel="noopener noreferrer">
           <EyeIcon />
         </a>
       </IconsWrapper>
@@ -36,8 +36,8 @@ export const Projects = () => {
           onMouseOver={() =>
             setImage((i) => ({
               name: "juniorStart",
-              liveURL: "",
-              githubURL: "",
+              liveURL: "https://github.com/juniorstart/front-react",
+              githubURL: "https://github.com/juniorstart/front-react",
             }))
           }
         >

@@ -5,4 +5,7 @@ export const StyledHeading = styled.h2`
   -webkit-text-stroke: 0.01px black;
   font-family: ${({ theme }) => theme.font.family.Lato};
   font-size: calc(${({ theme }) => theme.font.size.l} * 1.2);
+  ${({ theme }) => theme.mq.mobileXL} {
+    text-align: center;
+  }
 `;
