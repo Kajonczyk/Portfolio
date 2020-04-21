@@ -24,20 +24,43 @@ export const StyledHeader = styled.header`
   height: 100vh;
   width: 100%;
   background-color: ${({ theme }) => theme.colorPrimary};
+  position: relative;
 `;
 export const StyledH1 = styled.h1`
   ${paragraphStyles};
   font-size: ${({ theme }) => theme.font.size.l};
+  transition: font-size 0.2s;
+  ${({ theme }) => theme.mq.mobileL} {
+    font-size: calc(${({ theme }) => theme.font.size.l} + 0.5rem);
+  }
+  ${({ theme }) => theme.mq.tablet} {
+    font-size: calc(${({ theme }) => theme.font.size.l} + 1rem);
+  }
 `;
 export const StyledH2 = styled.h2`
   ${paragraphStyles};
+  font-size: ${({ theme }) => theme.font.size.s};
+  -webkit-text-stroke: 0.1px black;
+  transition: font-size 0.2s;
+
+  ${({ theme }) => theme.mq.tablet} {
+    font-size: calc(${({ theme }) => theme.font.size.s} + 0.3rem);
+  }
 `;
 export const StyledParagraph = styled.p`
   position: relative;
   z-index: 2;
   margin-top: 20px;
-  font-family: ${({ theme }) => theme.font.family.Lato};
+  font-family: ${({ theme }) => theme.font.family.Didact};
   font-size: ${({ theme }) => theme.font.size.xs};
+  padding: 0px 20px;
+  ${({ theme }) => theme.mq.mobileL} {
+    padding: 0px 40px;
+  }
+  ${({ theme }) => theme.mq.tablet} {
+    padding: 20px 100px;
+    font-size: calc(${({ theme }) => theme.font.size.xs} + 0.2rem);
+  }
 `;
 export const StyledTextWrapper = styled.div`
   position: absolute;

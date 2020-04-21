@@ -1,5 +1,4 @@
 import React from "react";
-import { StyledSection } from "../../Shared/StyledSection";
 import { StyledHeading } from "../../Shared/SectionHeading";
 import {
   ReactIcon,
@@ -8,6 +7,7 @@ import {
   CssIcon,
   JavascriptIcon,
   IconsWrapper,
+  StyledSection,
 } from "./TechnologiesStyles";
 
 export const Technologies = () => {

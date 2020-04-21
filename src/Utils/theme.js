@@ -1,6 +1,7 @@
 export const theme = {
   colorPrimary: "#5E9C8D",
   colorSecondary: "#F2F2F2",
+  lightenedPrimary: "#8dc4b7",
   font: {
     size: {
       xs: "1rem",
@@ -15,6 +16,9 @@ export const theme = {
     },
   },
   mq: {
+    mobileM: "@media (min-width: 400px)",
+    mobileL: "@media (min-width: 425px)",
+    mobileXL: "@media (min-width: 500px)",
     tablet: "@media (min-width: 768px)",
     desktop: "@media (min-width: 1024px)",
   },

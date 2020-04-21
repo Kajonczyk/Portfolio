@@ -40,27 +40,23 @@ export class Header extends Component {
       });
     }
   };
+  scrollToSection = () => {
+    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+  };
 
   render() {
     const { posX, posY } = this.state;
     return (
       <>
         <StyledHeader ref={(e) => (this.sectionRef = e)}>
-          <Shape width="110%" height="200%" top="15%" left="45%" />
+          <Shape top="10%" left="50%" scale="2" headerTop />
           <Shape
-            width="100%"
-            height="100%"
-            top="-30%"
-            left="-10%"
-            rotation="-120"
-          />
-          <Shape
-            width="100%"
-            height="100%"
-            top="-120%"
-            left="106%"
-            rotation="60"
-            scale="0.5"
+            top="70%"
+            left="-60px"
+            scale="0.8"
+            rotate="-140"
+            position="absolute"
+            headerLeft
           />
           <StyledTextWrapper offsetX={posX} offsetY={posY}>
             <StyledH1>Kamil Kopczacki</StyledH1>
@@ -69,7 +65,7 @@ export class Header extends Component {
               I’m a web development enthusiast who is passionate about building
               modern, performant websites
             </StyledParagraph>
-            <StyledButton>Explore</StyledButton>
+            <StyledButton onClick={this.scrollToSection}>Explore</StyledButton>
           </StyledTextWrapper>
           <GithubIcon />
         </StyledHeader>

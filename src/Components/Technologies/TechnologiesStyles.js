@@ -4,12 +4,23 @@ import { Redux } from "@styled-icons/boxicons-logos/Redux";
 import { Html5 } from "@styled-icons/boxicons-logos/Html5";
 import { Css3 } from "@styled-icons/boxicons-logos/Css3";
 import { Javascript } from "@styled-icons/boxicons-logos/Javascript";
+import { StyledSection as Section } from "../../Shared/StyledSection";
 
 const iconsProperties = ({ theme }) =>
   `
     width:90px;
     color: ${theme.colorSecondary};
+  transition: transform .2s, color .6s;
+    &:hover{
+      transform: translateY(-5px);
+      color: ${theme.lightenedPrimary}
+    }
 
+`;
+export const StyledSection = styled(Section)`
+  ${({ theme }) => theme.mq.tablet} {
+    height: 200px;
+  }
 `;
 
 export const IconsWrapper = styled.div`
@@ -19,6 +30,9 @@ export const IconsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  ${({ theme }) => theme.mq.tablet} {
+    flex-direction: row;
+  }
 `;
 export const ReactIcon = styled(ReactLogo)`
   ${iconsProperties};

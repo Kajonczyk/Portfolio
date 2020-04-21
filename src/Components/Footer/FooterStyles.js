@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import React from "react";
 import { Envelope } from "@styled-icons/evil/Envelope";
 const absoluteStyles = () => `
 position:absolute;
@@ -19,6 +18,9 @@ export const StyledFooter = styled.footer`
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  ${({ theme }) => theme.mq.tablet} {
+    height: 130px;
+  }
 `;
 export const StyledParagraph = styled.p`
   color: black;
