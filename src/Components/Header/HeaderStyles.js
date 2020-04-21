@@ -1,5 +1,5 @@
-import styled from "styled-components";
-
+import styled, { keyframes } from "styled-components";
+import { Github } from "@styled-icons/boxicons-logos/Github";
 const paragraphStyles = ({ theme }) =>
   `font-family: ${theme.font.family.Didact};
   color:transparent;
@@ -8,6 +8,24 @@ const paragraphStyles = ({ theme }) =>
   z-index:2;
   `;
 
+const show = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
+export const GithubIcon = styled(Github)`
+  width: 40px;
+  color: ${({ theme }) => theme.colorSecondary};
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
 export const StyledHeader = styled.header`
   margin: 0px auto;
   text-align: center;
@@ -15,20 +33,43 @@ export const StyledHeader = styled.header`
   height: 100vh;
   width: 100%;
   background-color: ${({ theme }) => theme.colorPrimary};
+  position: relative;
 `;
 export const StyledH1 = styled.h1`
   ${paragraphStyles};
   font-size: ${({ theme }) => theme.font.size.l};
+  transition: font-size 0.2s;
+  ${({ theme }) => theme.mq.mobileL} {
+    font-size: calc(${({ theme }) => theme.font.size.l} + 0.5rem);
+  }
+  ${({ theme }) => theme.mq.tablet} {
+    font-size: calc(${({ theme }) => theme.font.size.l} + 1rem);
+  }
 `;
 export const StyledH2 = styled.h2`
   ${paragraphStyles};
+  font-size: ${({ theme }) => theme.font.size.s};
+  -webkit-text-stroke: 0.1px black;
+  transition: font-size 0.2s;
+
+  ${({ theme }) => theme.mq.tablet} {
+    font-size: calc(${({ theme }) => theme.font.size.s} + 0.3rem);
+  }
 `;
 export const StyledParagraph = styled.p`
   position: relative;
   z-index: 2;
-  margin-top: 50px;
-  font-family: ${({ theme }) => theme.font.family.Lato};
+  margin-top: 20px;
+  font-family: ${({ theme }) => theme.font.family.Didact};
   font-size: ${({ theme }) => theme.font.size.xs};
+  padding: 0px 20px;
+  ${({ theme }) => theme.mq.mobileL} {
+    padding: 0px 40px;
+  }
+  ${({ theme }) => theme.mq.tablet} {
+    padding: 20px 100px;
+    font-size: calc(${({ theme }) => theme.font.size.xs} + 0.2rem);
+  }
 `;
 export const StyledTextWrapper = styled.div`
   position: absolute;
@@ -40,4 +81,6 @@ export const StyledTextWrapper = styled.div`
   );
   width: 100%;
   overflow: hidden;
+  animation: ${show} 0.5s linear;
+  animation-delay: 0.7s;
 `;
