@@ -21,6 +21,9 @@ export const StyledFooter = styled.footer`
   ${({ theme }) => theme.mq.tablet} {
     height: 130px;
   }
+  ${({ theme }) => theme.mq.desktop} {
+    height: 160px;
+  }
 `;
 export const StyledParagraph = styled.p`
   color: black;

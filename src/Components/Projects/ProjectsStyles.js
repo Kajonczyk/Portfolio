@@ -94,8 +94,8 @@ export const StyledBackground = styled.div`
   transform: translate(-50%, -50%);
   z-index: 2;
   opacity: 0.6;
-  background-image: ${({ image }) => backgroundMobile(image.name)};
   transition: background-image 0.3s;
+  background-image: ${({ image }) => backgroundMobile(image.name)};
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

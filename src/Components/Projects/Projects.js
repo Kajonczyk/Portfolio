@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { StyledHeading } from "../../Shared/SectionHeading";
 import { StyledSection } from "../../Shared/StyledSection";
+import { StyledContent } from "../../Shared/StyledContent";
+
 import {
   StyledItem,
   StyledItemsWrapper,
@@ -15,7 +17,9 @@ export const Projects = () => {
   const [image, setImage] = useState({ name: "", liveURL: "", githubUrl: "" });
   return (
     <StyledSection>
-      <StyledHeading>Projects</StyledHeading>
+      <StyledContent>
+        <StyledHeading>Projects</StyledHeading>
+      </StyledContent>
       <StyledBackground image={image} />
       <IconsWrapper active={!!image.name}>
         <a href={image.githubURL} target="_blank" rel="noopener noreferrer">

@@ -33,6 +33,11 @@ export const IconsWrapper = styled.div`
   ${({ theme }) => theme.mq.tablet} {
     flex-direction: row;
   }
+  ${({ theme }) => theme.mq.desktop} {
+    padding: 0px 100px;
+    max-width: 1200px;
+    margin: 0px auto;
+  }
 `;
 export const ReactIcon = styled(ReactLogo)`
   ${iconsProperties};

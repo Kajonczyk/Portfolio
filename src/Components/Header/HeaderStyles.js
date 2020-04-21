@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Github } from "@styled-icons/boxicons-logos/Github";
 const paragraphStyles = ({ theme }) =>
   `font-family: ${theme.font.family.Didact};
@@ -8,6 +8,15 @@ const paragraphStyles = ({ theme }) =>
   z-index:2;
   `;
 
+const show = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
 export const GithubIcon = styled(Github)`
   width: 40px;
   color: ${({ theme }) => theme.colorSecondary};
@@ -72,4 +81,6 @@ export const StyledTextWrapper = styled.div`
   );
   width: 100%;
   overflow: hidden;
+  animation: ${show} 0.5s linear;
+  animation-delay: 0.7s;
 `;

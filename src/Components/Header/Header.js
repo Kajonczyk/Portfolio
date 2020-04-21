@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyledButton } from "../../Shared/StyledButton";
 import { Shape } from "../../Shared/Shape";
+import { EntryAnimation } from "./EntryAnimation";
 import {
   StyledH1,
   StyledH2,
@@ -9,6 +10,10 @@ import {
   StyledTextWrapper,
   GithubIcon,
 } from "./HeaderStyles";
+
+const ShapeElement = React.memo(() => (
+  <Shape top="10%" left="50%" scale="2" headerTop />
+));
 
 export class Header extends Component {
   state = {
@@ -49,7 +54,7 @@ export class Header extends Component {
     return (
       <>
         <StyledHeader ref={(e) => (this.sectionRef = e)}>
-          <Shape top="10%" left="50%" scale="2" headerTop />
+          <ShapeElement />
           <Shape
             top="70%"
             left="-60px"
@@ -69,6 +74,7 @@ export class Header extends Component {
           </StyledTextWrapper>
           <GithubIcon />
         </StyledHeader>
+        <EntryAnimation />
       </>
     );
   }
