@@ -16,7 +16,7 @@ import {
 export const Projects = () => {
   const [image, setImage] = useState({ name: "", liveURL: "", githubUrl: "" });
   return (
-    <StyledSection>
+    <StyledSection notFullHeight>
       <StyledContent>
         <StyledHeading>Projects</StyledHeading>
       </StyledContent>
@@ -33,6 +33,7 @@ export const Projects = () => {
       <StyledItemsWrapper>
         <StyledDot />
         <StyledItem
+          name="juniorStart"
           onMouseOver={() =>
             setImage((i) => ({
               name: "juniorStart",
@@ -45,6 +46,7 @@ export const Projects = () => {
         </StyledItem>
         <StyledDot />
         <StyledItem
+          name="hawksman"
           onMouseOver={() =>
             setImage((i) => ({
               name: "hawksman",
@@ -57,6 +59,7 @@ export const Projects = () => {
         </StyledItem>
         <StyledDot />
         <StyledItem
+          name="videoApp"
           onMouseOver={() =>
             setImage((i) => ({
               name: "videoApp",

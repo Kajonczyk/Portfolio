@@ -24,6 +24,7 @@ export const GithubIcon = styled(Github)`
   top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: black;
 `;
 
 export const StyledHeader = styled.header`
@@ -79,6 +80,7 @@ export const StyledTextWrapper = styled.div`
     calc(-50% - ${({ offsetX }) => offsetX}px),
     calc(-50% - ${({ offsetY }) => offsetY}px)
   );
+  cursor: pointer;
   width: 100%;
   overflow: hidden;
   animation: ${show} 0.5s linear;

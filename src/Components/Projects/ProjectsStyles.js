@@ -114,7 +114,6 @@ export const StyledItem = styled.h3`
   color: transparent;
   -webkit-text-stroke: 0.01px black;
   font-family: ${({ theme }) => theme.font.family.Didact};
-
   text-align: center;
   font-size: calc(${({ theme }) => theme.font.size.l} * 1.5);
   cursor: pointer;
@@ -125,6 +124,24 @@ export const StyledItem = styled.h3`
     color: white;
     -webkit-text-stroke: 0px;
   }
+  ${({ theme }) => theme.mq.desktop} {
+    padding: 50px 20px;
+    border: 1px solid black;
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-image: ${({ name }) => backgroundMobile(name)};
+      opacity: 0.3;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+  }
 `;
 export const StyledDot = styled.div`
   width: 13px;
@@ -132,6 +149,12 @@ export const StyledDot = styled.div`
   border-radius: 25px;
   margin: 0px auto;
   background-color: ${({ theme }) => theme.colorSecondary};
+  ${({ theme }) => theme.mq.desktop} {
+    display: none;
+  }
+  ${({ theme }) => theme.mq.desktopL} {
+    display: block;
+  }
 `;
 
 export const StyledItemsWrapper = styled.div`
@@ -145,6 +168,9 @@ export const StyledItemsWrapper = styled.div`
   position: relative;
   z-index: 2;
   &:hover ${StyledItem} {
-    opacity: 0.4;
+    opacity: 0.7;
+  }
+  ${({ theme }) => theme.mq.desktop} {
+    flex-direction: row;
   }
 `;

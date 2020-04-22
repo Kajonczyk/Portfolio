@@ -5,4 +5,12 @@ export const StyledSection = styled.section`
   background-color: ${({ theme }) => theme.colorPrimary};
   position: relative;
   overflow: hidden;
+  ${({ theme }) => theme.mq.desktop} {
+    ${({ notFullHeight }) =>
+      notFullHeight &&
+      `
+      height: 70vh;
+    
+    `}
+  }
 `;

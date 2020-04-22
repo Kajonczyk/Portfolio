@@ -72,7 +72,13 @@ export class Header extends Component {
             </StyledParagraph>
             <StyledButton onClick={this.scrollToSection}>Explore</StyledButton>
           </StyledTextWrapper>
-          <GithubIcon />
+          <a
+            href="https://github.com/Kajonczyk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GithubIcon />
+          </a>
         </StyledHeader>
         <EntryAnimation />
       </>
