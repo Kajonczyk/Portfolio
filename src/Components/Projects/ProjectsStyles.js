@@ -112,7 +112,7 @@ export const StyledBackground = styled.div`
 
 export const StyledItem = styled.h3`
   color: transparent;
-  -webkit-text-stroke: 0.01px black;
+  -webkit-text-stroke: 1px black;
   font-family: ${({ theme }) => theme.font.family.Didact};
   text-align: center;
   font-size: calc(${({ theme }) => theme.font.size.l} * 1.5);
@@ -123,6 +123,10 @@ export const StyledItem = styled.h3`
     opacity: 1 !important;
     color: white;
     -webkit-text-stroke: 0px;
+  }
+
+  ${({ theme }) => theme.mq.tablet} {
+    -webkit-text-stroke: 0.04px black;
   }
   ${({ theme }) => theme.mq.desktop} {
     padding: 50px 20px;
@@ -140,6 +144,9 @@ export const StyledItem = styled.h3`
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top;
+    }
+    ${({ theme }) => theme.mq.desktopL} {
+      padding: 80px 40px;
     }
   }
 `;

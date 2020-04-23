@@ -3,9 +3,12 @@ import { Github } from "@styled-icons/boxicons-logos/Github";
 const paragraphStyles = ({ theme }) =>
   `font-family: ${theme.font.family.Didact};
   color:transparent;
-  -webkit-text-stroke: 0.01px black;
+  -webkit-text-stroke: 1px black;
   position:relative;
   z-index:2;
+  ${theme.mq.tablet} {
+    -webkit-text-stroke: 0.04px black;
+  }
   `;
 
 const show = keyframes`
@@ -50,7 +53,6 @@ export const StyledH1 = styled.h1`
 export const StyledH2 = styled.h2`
   ${paragraphStyles};
   font-size: ${({ theme }) => theme.font.size.s};
-  -webkit-text-stroke: 0.1px black;
   transition: font-size 0.2s;
 
   ${({ theme }) => theme.mq.tablet} {

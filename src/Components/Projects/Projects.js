@@ -50,7 +50,7 @@ export const Projects = () => {
           onMouseOver={() =>
             setImage((i) => ({
               name: "hawksman",
-              liveURL: "",
+              liveURL: "https://kajonczyk.github.io/Hawksman/",
               githubURL: "https://github.com/Kajonczyk/Hawksman",
             }))
           }
@@ -63,7 +63,7 @@ export const Projects = () => {
           onMouseOver={() =>
             setImage((i) => ({
               name: "videoApp",
-              liveURL: "",
+              liveURL: "https://kajonczyk.github.io/VideoApp/",
               githubURL: "https://github.com/Kajonczyk/VideoApp",
             }))
           }
